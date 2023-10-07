@@ -1,0 +1,23 @@
+@import "../../../styles/colors.scss";
+
+.nav-bar-button {
+    outline: none;
+    background-color: transparent;
+    border: 0;
+};
+
+.nav-bar-text {
+    color: $primary-color;
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+.nav-bar-button:hover {
+    background-color: $secondary-color;
+    padding: 10px;
+    transition: padding 0.5s;
+};
+
+.nav-bar-button:hover .nav-bar-text {
+    color: red;
+}
