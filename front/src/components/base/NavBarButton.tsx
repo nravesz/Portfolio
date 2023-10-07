@@ -1,4 +1,5 @@
 import React from "react";
+import { FaHome } from "react-icons/fa";
 import "./styles/NavBarButton.scss";
 
 type Props = {
@@ -13,6 +14,7 @@ const NavBarButton = ({name, route, handleClick}: Props) => {
             className="nav-bar-button"
             onClick={() => handleClick(name)}
         >
+            <FaHome className="nav-bar-icon" />
             <div className="nav-bar-text">{name}</div>
         </button>
     )
