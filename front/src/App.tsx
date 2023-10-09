@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { NavBar } from "../src/components/base";
+import { Layout, NavBar } from "../src/components/base";
 import { HomePage, ContactPage } from './pages';
 
 function App() {
@@ -9,9 +9,10 @@ function App() {
     // <div className="App">
     //   <Home />
     // </div>
-    <div>
+
 
       <BrowserRouter>
+  <Layout>
         <NavBar />
         <Routes>
           <Route>
@@ -20,9 +21,8 @@ function App() {
             <Route path="contact" element={<ContactPage />} />
           </Route>
         </Routes>
+</Layout>
     </BrowserRouter>
-
-    </div>
   );
 }
 

@@ -1,4 +1,5 @@
+import Layout from "./Layout";
 import NavBar from "./NavBar";
 import NavBarButton from "./NavBarButton";
 
-export { NavBar, NavBarButton };
+export { Layout, NavBar, NavBarButton };
