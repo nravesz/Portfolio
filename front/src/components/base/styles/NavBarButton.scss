@@ -4,31 +4,10 @@
     outline: none;
     background-color: transparent;
     border: 0;
-    transition: padding-right 0.5s;
-};
-
-.nav-bar-icon {
-    background-color: $primary-color;
-    font-size: 30px;
-    margin: 0;
-    padding: 10px;
-    transition: font-size 0.5s;
-    border-radius: 50%;
-};
-
-.nav-bar-text {
-    color: $primary-color;
-    font-family: Roboto;
+    color: WHITE;
     font-weight: bold;
-    display: none;
-}
+};
 
 .nav-bar-button:hover {
-    background-color: $secondary-color;
-    padding-right: 80px;
+    color: $primary-color;
 };
-
-.nav-bar-button:hover .nav-bar-text {
-    color: red;
-    display: contents;
-}

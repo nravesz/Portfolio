@@ -1,0 +1,31 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/fonts.scss";
+
+
+.greetings-text {
+    font-family: $subtitle-family;
+    color:lightgray;
+    font-size: $subtitle-size;
+    font-weight: bold;
+};
+
+.name-text {
+    font-family: $subtitle-family;
+    color: lightgray;
+    font-size: $subtitle-size;
+    font-weight: bold;
+};
+
+.stack-text {
+    font-family: $subtitle-family;
+    font-size: $title-size;
+    font-weight: bold;
+    background: linear-gradient(180deg, $primary-color, $secondary-color);
+  
+    /* Set the background-clip property to text */
+    -webkit-background-clip: text;
+    background-clip: text;
+  
+    /* Set the text color to transparent */
+    color: transparent;
+};
