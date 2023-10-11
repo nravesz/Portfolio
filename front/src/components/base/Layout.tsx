@@ -7,7 +7,7 @@ type Props = {
 
 const Layout = ({children}: Props) => {
     return (
-        <div className="layout-div">
+        <div>
             {children}
         </div>
     );
