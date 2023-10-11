@@ -1,0 +1,13 @@
+@import "../../../styles/colors.scss";
+
+.nav-bar-button {
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    color: WHITE;
+    font-weight: bold;
+};
+
+.nav-bar-button:hover {
+    color: $primary-color;
+};

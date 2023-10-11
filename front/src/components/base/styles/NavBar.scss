@@ -1,0 +1,11 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/variables.scss";
+
+.nav-bar-div {
+    font-family: Roboto;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: $navbar-div-height;
+};
