@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { NavBarButton } from ".";
+import { routes } from "../../pages";
 import "./styles/NavBar.scss";
 
 const NavBar = () => {
@@ -14,6 +15,11 @@ const NavBar = () => {
             <NavBarButton
                 name="Home"
                 route="home"
+                handleClick={handleClick}
+            />
+            <NavBarButton
+                name="Projects"
+                route={routes.PROJECTS}
                 handleClick={handleClick}
             />
             <NavBarButton
