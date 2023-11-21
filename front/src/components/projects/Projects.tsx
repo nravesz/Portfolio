@@ -1,6 +1,11 @@
+import { ProjectCard } from ".";
+
 const Projects = () => {
     return (
-        <div>projects</div>
+        <div>
+            <div>holis</div>
+            <ProjectCard />
+        </div>
     );
 };
 

@@ -1,0 +1,29 @@
+@import "../../../styles/colors.scss";
+
+// $edge-size: 40px;
+
+// // $div-width: 300px;
+// $div-width: 50%;
+// $edge-porcent-size-width: $edge-size / $div-width * 100%;
+
+// $div-height: 300px;
+// $edge-porcent-size-height: $edge-size / $div-height * 100%;
+
+// .project-card-div {
+//     width: $div-width;
+//     height: $div-height;
+//     background-color: red;
+//     clip-path: polygon(
+//         0% 0%,
+//         calc(100% - $edge-porcent-size-width) 0%,
+//         100% $edge-porcent-size-height,
+//         100% 100%,
+//         $edge-porcent-size-width 100%,
+//         0% calc(100% - $edge-porcent-size-height));
+// };
+
+.project-card-div {
+    background-color: $primary-color;
+    width: 50%;
+    height: 200px;
+}
