@@ -1,9 +1,14 @@
 import { ProjectCard } from ".";
 
+// tech
+// name
+// description
+// repository
+// demo
+
 const Projects = () => {
     return (
         <div>
-            <div>holis</div>
             <ProjectCard />
         </div>
     );
