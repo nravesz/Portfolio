@@ -12,17 +12,17 @@ function App() {
 
 
       <BrowserRouter>
-  <Layout>
-        <NavBar />
-        <Routes>
-          <Route>
-            <Route index element={<HomePage />} />
-            <Route path={routes.HOME} element={<HomePage />} />
-            <Route path={routes.PROJECTS} element={<ProjectsPage />} />
-            <Route path={routes.CONTACT} element={<ContactPage />} />
-          </Route>
-        </Routes>
-</Layout>
+        <Layout>
+          <NavBar />
+          <Routes>
+            <Route>
+              <Route index element={<HomePage />} />
+              <Route path={routes.HOME} element={<HomePage />} />
+              <Route path={routes.PROJECTS} element={<ProjectsPage />} />
+              <Route path={routes.CONTACT} element={<ContactPage />} />
+            </Route>
+          </Routes>
+        </Layout>
     </BrowserRouter>
   );
 }

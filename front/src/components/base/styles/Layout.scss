@@ -14,18 +14,15 @@
 };
 
 .layout-div {
-    background-image: url("../../../assets/background.jpeg");
-    background-size: auto;
-    background-position: center;
-    height: 100vh;
-    animation: slidein 100s linear infinite alternate;
-};
-
-@keyframes slidein {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+    max-height: 100vh;
+    overflow: hidden;
+    background:
+    radial-gradient(circle at 0% 100%, rgba(104, 60, 228, 0.1), transparent 500px),
+    radial-gradient(circle at 20% 30%, rgba(104, 60, 228, 0.1), transparent 500px),
+    radial-gradient(circle at 50% 70%, rgba(16, 229, 178, 0.1), transparent 500px),
+    radial-gradient(circle at 80% 40%, rgba(104, 60, 228, 0.1), transparent 500px),
+    radial-gradient(circle at 50% 0%, rgba(16, 229, 178, 0.1), transparent 500px),
+    radial-gradient(circle at 50% 100%, rgba(16, 229, 178, 0.1), transparent 500px),
+    radial-gradient(circle at 100% 0%, rgba(16, 229, 178, 0.1), transparent 500px),
+    radial-gradient(circle at 100% 100%, rgba(104, 60, 228, 0.1), transparent 500px);
 };
