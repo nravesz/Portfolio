@@ -1,4 +1,5 @@
 import { ProjectCard } from ".";
+import "../../styles/common.scss";
 
 // tech
 // name
@@ -9,6 +10,15 @@ import { ProjectCard } from ".";
 const Projects = () => {
     return (
         <div>
+            <div className='title'> Projects </div>
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
             <ProjectCard />
         </div>
     );
