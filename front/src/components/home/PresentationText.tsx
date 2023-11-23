@@ -1,19 +1,15 @@
-import "./styles/PresentationText.scss";
+const presentation = `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+     nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+     reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+     culpa qui officia deserunt mollit anim id est laborum.`
 
 const PresentationText = () => {
     return (
         <div>
-            <p className="greetings-text"> Hi! </p>
-            <p className="name-text"> I'm Nicole Raveszani </p>
-            <div>
-                {/* <p className="stack-text"> A Full Stack Developer </p>
-                <p className="stack-text"> A Full Stack Developer </p> */}
-                <div className="glitch-text-div">
-                    <div className="glitch-text-1"> A Full Stack Developer </div>
-                    <div className="glitch-text-2"> A Full Stack Developer </div>
-                    <div className="glitch-text-3"> A Full Stack Developer </div>
-                </div>
-            </div>
+            <p> { presentation } </p>
         </div>
     );
 };

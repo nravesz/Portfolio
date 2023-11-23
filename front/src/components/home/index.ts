@@ -1,9 +1,9 @@
 import Home from "./Home";
+import TitleText from "./TitleText";
 import PresentationText from "./PresentationText";
-import PresentationImage from "./PresentationImage";
 
 export  {
     Home,
-    PresentationText,
-    PresentationImage
+    TitleText,
+    PresentationText
 };
