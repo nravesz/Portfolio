@@ -1,4 +1,5 @@
 @import "../../../styles/colors.scss";
+@import "../../../styles/fonts.scss";
 
 // $edge-size: 40px;
 
@@ -23,7 +24,20 @@
 // };
 
 .project-card-div {
-    background-color: $primary-color;
-    width: 50%;
+    background-color: $card-color;
+    width: 60%;
     height: 200px;
-}
+    margin-top: 15px;
+    border-radius: 20px
+};
+
+.project-card-name {
+    color: white;
+    font-family: $title-family;
+    font-size: 30px;
+    font-weight: bold;
+};
+
+.project-card-description {
+    color: $subtitle-color;
+};
