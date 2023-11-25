@@ -1,14 +1,35 @@
 .project-carousel-div {
-    display: flex;
-    flex-direction: row;
-};
+  display: flex;
+  flex-direction: row;
+}
 
 .project-carousel-item {
-    background-color: red;
-    transition: transform 2s;
-};
+  background-color: red;
+  transition: transform 2s ease;
+}
 
-.project-carousel-item.active {
-    background-color: blue;
-    transform: scale(2);
-};
+.project-carousel-item.middle {
+  transform: translateX(0);
+  background-color: blue;
+  opacity: 1;
+}
+
+.project-carousel-item.left {
+  transform: translateX(-100%);
+}
+
+.project-carousel-item.right {
+  transform: translateX(100%);
+}
+
+.test {
+    transition: transform 2s ease;
+    background-color: red;
+}
+.test.right {
+    transform: translateX(100%);
+}
+
+.test.left {
+    transform: translateX(-100%);
+}

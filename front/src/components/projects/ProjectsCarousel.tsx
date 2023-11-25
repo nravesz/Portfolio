@@ -39,6 +39,8 @@ const projects: IProject[] = [
 
 const ProjectsCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [test1, setTest1] = useState("");
+    const [test2, setTest2] = useState("");
 
     const getVisibleIndexes = () => {
         const totalProjects = projects.length;
@@ -65,7 +67,7 @@ const ProjectsCarousel = () => {
             {getVisibleIndexes().map((index, indexList) => (
                 <div
                     key={indexList}
-                    className={`project-carousel-item ${index === currentIndex ? "active" : ""}`}
+                    className={`project-carousel-item  ${indexList === 0 ? 'left' : indexList === 2 ? 'right' : 'middle'}`}
                     onClick={() => {
                         const [ left, middle, right ] = getVisibleIndexes();
                         if (index === left) {
@@ -74,10 +76,35 @@ const ProjectsCarousel = () => {
                             handleRightClick();
                         };
                     }}
+                    style={{ transform: `translateX(${(indexList - 1) * 100}%)` }}
                 >
-                    {projects[index].name}
+                    {indexList}
                 </div>
             ))}
+            {/* <div
+                className={`test  ${test1 === "left" ? 'left' : test1 === "right" ? 'right' : ''}`}
+                onClick={() => {
+                    if (test1 === "") {
+                        setTest1("left");
+                    } else if (test1 === "left") {
+                        setTest1("right");
+                    } else {
+                        setTest1("");
+                    }
+                }}
+            >Project 1</div>
+            <div
+                            className={`test  ${test2 === "left" ? 'left' : test2 === "right" ? 'right' : ''}`}
+                            onClick={() => {
+                                if (test2 === "") {
+                                    setTest2("left");
+                                } else if (test2 === "left") {
+                                    setTest2("right");
+                                } else {
+                                    setTest2("");
+                                }
+                            }}
+            >Project 2</div> */}
         </div>
     )
 };
