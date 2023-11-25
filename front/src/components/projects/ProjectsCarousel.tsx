@@ -10,21 +10,24 @@ const projects: IProject[] = [
         repository: "repo",
         hasDemo: true,
         demo: "demo"
-    }, {  
+    },
+    {  
         stack: ["TypeScript", "React", "Sass"],
         name: "Project 2",
         description: "project",
         repository: "repo",
         hasDemo: true,
         demo: "demo"
-    }, {  
+    },
+    {  
         stack: ["TypeScript", "React", "Sass"],
         name: "Project 3",
         description: "project",
         repository: "repo",
         hasDemo: true,
         demo: "demo"
-    }, {
+    },
+    {
         stack: ["TypeScript", "React", "Sass"],
         name: "Project 4",
         description: "project",
@@ -59,9 +62,9 @@ const ProjectsCarousel = () => {
 
     return(
         <div className="project-carousel-div">
-            {getVisibleIndexes().map((index) => (
+            {getVisibleIndexes().map((index, indexList) => (
                 <div
-                    key={index}
+                    key={indexList}
                     className={`project-carousel-item ${index === currentIndex ? "active" : ""}`}
                     onClick={() => {
                         const [ left, middle, right ] = getVisibleIndexes();
