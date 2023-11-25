@@ -1,0 +1,14 @@
+.project-carousel-div {
+    display: flex;
+    flex-direction: row;
+};
+
+.project-carousel-item {
+    background-color: red;
+    transition: transform 2s;
+};
+
+.project-carousel-item.selected {
+    background-color: blue;
+    transform: scale(2);
+};

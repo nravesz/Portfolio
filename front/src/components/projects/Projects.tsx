@@ -1,4 +1,4 @@
-import { ProjectCard, IProject } from ".";
+import { ProjectCard, IProject, ProjectsCarousel } from ".";
 import "./styles/Projects.scss";
 import "../../styles/common.scss";
 
@@ -16,7 +16,7 @@ const Projects = () => {
     return (
         <div className="general-div">
             <div className='title'> Projects </div>
-            <div className="projects-div">
+            {/* <div className="projects-div">
                 <ProjectCard project={project} />
                 <ProjectCard project={project} />
                 <ProjectCard project={project} />
@@ -24,7 +24,8 @@ const Projects = () => {
                 <ProjectCard project={project} />
                 <ProjectCard project={project} />
                 <ProjectCard project={project} />
-            </div>
+            </div> */}
+            <ProjectsCarousel />
         </div>
     );
 };
