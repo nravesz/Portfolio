@@ -32,27 +32,47 @@ const projects: IProject[] = [
         hasDemo: true,
         demo: "demo"
     }
-]
+];
 
 const ProjectsCarousel = () => {
-    const [currentProject, setCurrentProject] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-    const handleProjectClick = (index: number) => {
-        setCurrentProject(index);
-      };
+    const getVisibleIndexes = () => {
+        const totalProjects = projects.length;
+        console.log(totalProjects)
+        // (this % n) + n) % n
+        const leftIndex = (((currentIndex - 1) % totalProjects) + totalProjects) % totalProjects;
+        const middleIndex = currentIndex;
+        const rightIndex = (((currentIndex + 1) % totalProjects) + totalProjects) % totalProjects;
+        return [leftIndex, middleIndex, rightIndex];
+    };
+
+    const handleRightClick = () => {
+        const totalProjects = projects.length;
+        setCurrentIndex((((currentIndex + 1) % totalProjects) + totalProjects) % totalProjects);
+    };
+
+    const handleLeftClick = () => {
+        const totalProjects = projects.length;
+        setCurrentIndex((((currentIndex - 1) % totalProjects) + totalProjects) % totalProjects);
+    }
 
     return(
         <div className="project-carousel-div">
-            {/* <ProjectCard project={projects[0]} />
-            <ProjectCard project={projects[1]} />
-            <ProjectCard project={projects[2]} /> */}
-            {projects.map((project, index) => (
+            {getVisibleIndexes().map((index) => (
                 <div
                     key={index}
-                    className={`project-carousel-item ${index === currentProject ? 'selected' : ''}`}
-                    onClick={() => handleProjectClick(index)}
+                    className={`project-carousel-item ${index === currentIndex ? "active" : ""}`}
+                    onClick={() => {
+                        const [ left, middle, right ] = getVisibleIndexes();
+                        if (index === left) {
+                            handleLeftClick();
+                        } else if (index === right) {
+                            handleRightClick();
+                        };
+                    }}
                 >
-                <div>{project.name}</div>
+                    {projects[index].name}
                 </div>
             ))}
         </div>
