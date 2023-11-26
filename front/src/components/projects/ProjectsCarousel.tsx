@@ -42,14 +42,11 @@ const ProjectsCarousel = () => {
 
     const getVisibleIndexes = () => {
         const totalProjects = projects.length;
-        console.log(totalProjects)
         // (this % n) + n) % n
-        const fadingLeftIndex = (((currentIndex - 2) % totalProjects) + totalProjects) % totalProjects;
         const leftIndex = (((currentIndex - 1) % totalProjects) + totalProjects) % totalProjects;
         const middleIndex = currentIndex;
         const rightIndex = (((currentIndex + 1) % totalProjects) + totalProjects) % totalProjects;
-        const fadingRightIndex = (((currentIndex + 2) % totalProjects) + totalProjects) % totalProjects;
-        return [fadingLeftIndex, leftIndex, middleIndex, rightIndex, fadingRightIndex];
+        return [leftIndex, middleIndex, rightIndex];
     };
 
     const handleRightClick = () => {
@@ -66,38 +63,26 @@ const ProjectsCarousel = () => {
         <div className="project-carousel-div">
             <div
                 key={getVisibleIndexes()[0]}
-                className={`project-carousel-item left-fading`}
+                className={`project-carousel-item left`}
+                onClick={() => handleLeftClick()}
+                onAnimationEnd={() => console.log("animation ended")}
             >
                 {projects[getVisibleIndexes()[0]].name}
             </div>
+
             <div
                 key={getVisibleIndexes()[1]}
-                className={`project-carousel-item left`}
-                onClick={() => handleLeftClick()}
+                className={`project-carousel-item middle`}
             >
                 {projects[getVisibleIndexes()[1]].name}
             </div>
 
             <div
                 key={getVisibleIndexes()[2]}
-                className={`project-carousel-item middle`}
-            >
-                {projects[getVisibleIndexes()[2]].name}
-            </div>
-
-            <div
-                key={getVisibleIndexes()[3]}
                 className={`project-carousel-item right`}
                 onClick={() => handleRightClick()}
             >
-                {projects[getVisibleIndexes()[3]].name}
-            </div>
-
-            <div
-                key={getVisibleIndexes()[4]}
-                className={`project-carousel-item right-fading`}
-            >
-                {projects[getVisibleIndexes()[4]].name}
+                {projects[getVisibleIndexes()[2]].name}
             </div>
         </div>
     )
