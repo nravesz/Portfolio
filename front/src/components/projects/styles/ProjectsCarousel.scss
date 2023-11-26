@@ -10,6 +10,7 @@
 
 .project-carousel-item.middle {
   transform: translateX(0);
+  scale: 1.5;
   background-color: blue;
   transition: transform 2s ease;
 }
@@ -18,16 +19,6 @@
   transform: translateX(-100%);
 }
 
-.project-carousel-item.left-fading {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
 .project-carousel-item.right {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
-
-.project-carousel-item.right-fading {
-    transform: translateX(100%);
-    opacity: 0;
-  }

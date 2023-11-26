@@ -39,48 +39,56 @@ const projects: IProject[] = [
 
 const ProjectsCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [activate, setActivate] = useState(false);
 
     const getVisibleIndexes = () => {
         const totalProjects = projects.length;
         // (this % n) + n) % n
+        const fadingLeftIndex = (((currentIndex - 2) % totalProjects) + totalProjects) % totalProjects;
         const leftIndex = (((currentIndex - 1) % totalProjects) + totalProjects) % totalProjects;
         const middleIndex = currentIndex;
         const rightIndex = (((currentIndex + 1) % totalProjects) + totalProjects) % totalProjects;
-        return [leftIndex, middleIndex, rightIndex];
+        const fadingRightIndex = (((currentIndex + 2) % totalProjects) + totalProjects) % totalProjects;
+        return [fadingLeftIndex, leftIndex, middleIndex, rightIndex, fadingRightIndex];
     };
 
     const handleRightClick = () => {
         const totalProjects = projects.length;
         setCurrentIndex((((currentIndex + 1) % totalProjects) + totalProjects) % totalProjects);
+        setActivate(true);
     };
 
     const handleLeftClick = () => {
         const totalProjects = projects.length;
         setCurrentIndex((((currentIndex - 1) % totalProjects) + totalProjects) % totalProjects);
+        setActivate(true);
     }
+
+    ///className={`carousel-item ${selectedItem === i ? 'selected' : ''}`}
 
     return(
         <div className="project-carousel-div">
             <div
-                key={getVisibleIndexes()[0]}
-                className={`project-carousel-item left`}
+                key={0}
+                className={`project-carousel-item ${activate === true ? "left" : ""}`}
                 onClick={() => handleLeftClick()}
-                onAnimationEnd={() => console.log("animation ended")}
+                onTransitionEnd={() => console.log("termino")}
             >
                 {projects[getVisibleIndexes()[0]].name}
             </div>
 
             <div
-                key={getVisibleIndexes()[1]}
+                key={1}
                 className={`project-carousel-item middle`}
             >
                 {projects[getVisibleIndexes()[1]].name}
             </div>
 
             <div
-                key={getVisibleIndexes()[2]}
-                className={`project-carousel-item right`}
+                key={2}
+                className={`project-carousel-item ${activate === true ? "right" : ""}`}
                 onClick={() => handleRightClick()}
+                onTransitionEnd={() => console.log("termino")}
             >
                 {projects[getVisibleIndexes()[2]].name}
             </div>
