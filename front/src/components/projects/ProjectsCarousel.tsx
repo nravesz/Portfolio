@@ -39,17 +39,17 @@ const projects: IProject[] = [
 
 const ProjectsCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [test1, setTest1] = useState("");
-    const [test2, setTest2] = useState("");
 
     const getVisibleIndexes = () => {
         const totalProjects = projects.length;
         console.log(totalProjects)
         // (this % n) + n) % n
+        const fadingLeftIndex = (((currentIndex - 2) % totalProjects) + totalProjects) % totalProjects;
         const leftIndex = (((currentIndex - 1) % totalProjects) + totalProjects) % totalProjects;
         const middleIndex = currentIndex;
         const rightIndex = (((currentIndex + 1) % totalProjects) + totalProjects) % totalProjects;
-        return [leftIndex, middleIndex, rightIndex];
+        const fadingRightIndex = (((currentIndex + 2) % totalProjects) + totalProjects) % totalProjects;
+        return [fadingLeftIndex, leftIndex, middleIndex, rightIndex, fadingRightIndex];
     };
 
     const handleRightClick = () => {
@@ -66,97 +66,39 @@ const ProjectsCarousel = () => {
         <div className="project-carousel-div">
             <div
                 key={getVisibleIndexes()[0]}
-                className={`project-carousel-item  left`}
-                onClick={() => handleLeftClick()}
+                className={`project-carousel-item left-fading`}
             >
                 {projects[getVisibleIndexes()[0]].name}
             </div>
-
             <div
                 key={getVisibleIndexes()[1]}
-                className={`project-carousel-item  middle`}
+                className={`project-carousel-item left`}
+                onClick={() => handleLeftClick()}
             >
                 {projects[getVisibleIndexes()[1]].name}
             </div>
 
             <div
                 key={getVisibleIndexes()[2]}
-                className={`project-carousel-item  right`}
-                onClick={() => handleRightClick()}
+                className={`project-carousel-item middle`}
             >
                 {projects[getVisibleIndexes()[2]].name}
             </div>
-            {/* {projects.map((project, index) => (
-                (index === getVisibleIndexes()[0] ?
-                    (
-                        <div
-                            key={index}
-                            className={`project-carousel-item  left`}
-                            onClick={() => handleLeftClick()}
-                        >
-                            {project.name}
-                        </div>
-                    ) : index === getVisibleIndexes()[1] ? (
-                        <div
-                            key={index}
-                            className={`project-carousel-item  middle`}
-                        >
-                            {project.name}
-                        </div>
-                    ) : index === getVisibleIndexes()[2] ? (
-                        <div
-                            key={index}
-                            className={`project-carousel-item  right`}
-                            onClick={() => handleLeftClick()}
-                        >
-                            {project.name}
-                        </div>
-                    ) : (
-                        <div></div>
-                    )
-                )
-            ))} */}
-            {/* {getVisibleIndexes().map((index, indexList) => (
-                <div
-                    key={indexList}
-                    className={`project-carousel-item  ${indexList === 0 ? 'left' : indexList === 2 ? 'right' : 'middle'}`}
-                    onClick={() => {
-                        const [ left, middle, right ] = getVisibleIndexes();
-                        if (index === left) {
-                            handleLeftClick();
-                        } else if (index === right) {
-                            handleRightClick();
-                        };
-                    }}
-                    style={{ transform: `translateX(${(indexList - 1) * 100}%)` }}
-                >
-                    {indexList}
-                </div>
-            ))} */}
-            {/* <div
-                className={`test  ${test1 === "left" ? 'left' : test1 === "right" ? 'right' : ''}`}
-                onClick={() => {
-                    if (test1 === "") {
-                        setTest1("left");
-                    } else if (test1 === "left") {
-                        setTest1("right");
-                    } else {
-                        setTest1("");
-                    }
-                }}
-            >Project 1</div>
+
             <div
-                            className={`test  ${test2 === "left" ? 'left' : test2 === "right" ? 'right' : ''}`}
-                            onClick={() => {
-                                if (test2 === "") {
-                                    setTest2("left");
-                                } else if (test2 === "left") {
-                                    setTest2("right");
-                                } else {
-                                    setTest2("");
-                                }
-                            }}
-            >Project 2</div> */}
+                key={getVisibleIndexes()[3]}
+                className={`project-carousel-item right`}
+                onClick={() => handleRightClick()}
+            >
+                {projects[getVisibleIndexes()[3]].name}
+            </div>
+
+            <div
+                key={getVisibleIndexes()[4]}
+                className={`project-carousel-item right-fading`}
+            >
+                {projects[getVisibleIndexes()[4]].name}
+            </div>
         </div>
     )
 };
