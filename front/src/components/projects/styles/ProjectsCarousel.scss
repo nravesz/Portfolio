@@ -1,3 +1,8 @@
+.project-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
 .project-carousel-div {
   display: flex;
   flex-direction: row;
@@ -5,20 +10,26 @@
 
 .project-carousel-item {
   background-color: red;
-  transition: transform 2s ease;
+  transition: transform 2s ease, scale 2s ease, opacity 2s ease;
+  scale: 1;
+  opacity: 1;
 }
 
 .project-carousel-item.middle {
   transform: translateX(0);
   scale: 1.5;
-  background-color: blue;
-  transition: transform 2s ease;
+  transition: transform 2s ease, scale 2s ease, opacity 2s ease;
+  opacity: 1;
 }
 
 .project-carousel-item.left {
   transform: translateX(-100%);
+  scale: 1;
+  opacity: 0.5;
 }
 
 .project-carousel-item.right {
-  transform: translateX(-100%);
+  transform: translateX(100%);
+  scale: 1;
+  opacity: 0.5;
 }
