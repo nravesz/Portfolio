@@ -14,18 +14,20 @@ const project: IProject = {
 
 const Projects = () => {
     return (
-        <div className="general-div">
-            <div className='title'> Projects </div>
-            {/* <div className="projects-div">
-                <ProjectCard project={project} />
-                <ProjectCard project={project} />
-                <ProjectCard project={project} />
-                <ProjectCard project={project} />
-                <ProjectCard project={project} />
-                <ProjectCard project={project} />
-                <ProjectCard project={project} />
-            </div> */}
-            <ProjectsCarousel />
+        <div>
+            <div className="general-div">
+                <div className='title'> Projects </div>
+                {/* <div className="projects-div">
+                    <ProjectCard project={project} />
+                    <ProjectCard project={project} />
+                    <ProjectCard project={project} />
+                    <ProjectCard project={project} />
+                    <ProjectCard project={project} />
+                    <ProjectCard project={project} />
+                    <ProjectCard project={project} />
+                </div> */}
+            </div>
+        <ProjectsCarousel />
         </div>
     );
 };

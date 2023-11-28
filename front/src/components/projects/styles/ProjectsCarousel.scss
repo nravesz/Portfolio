@@ -1,7 +1,6 @@
 .carousel-container {
-  position: relative;
-  margin: auto;
   overflow: hidden;
+  width: 100vw;
 
   .carousel-slides {
     display: flex;
@@ -52,13 +51,13 @@
 }
 
 .item {
-  flex:  0 0 20%;
+  flex:  0 0 100%;
   background-color: blue;
-  transform: flex 2s ease-in-out, background-color 2s ease-in-out;
+  transition: flex 2s ease-in-out, background-color 2s ease-in-out;
 }
 
 .item.current {
-  flex: 0 0 50%;
+  flex: 0 0 150%;
   background-color: red;
   color: green;
 }

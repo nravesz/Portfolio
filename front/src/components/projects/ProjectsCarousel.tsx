@@ -54,28 +54,28 @@ const ProjectsCarousel = () => {
           {/* Your carousel slides go here */}
           <div className={`carousel-slide`}
           >
-            <div className={`item ${currentSlide == 0 ? "current" : ""}`}
+            <div className={`item ${currentSlide == 4 ? "current" : ""}`}
             >
                 Project 1
             </div>
           </div>
           <div className={`carousel-slide`}>
-            <div className={`item ${currentSlide == 1 ? "current" : ""}`}>
+            <div className={`item ${currentSlide == 0 ? "current" : ""}`}>
                 Project 2
             </div>
            </div>
           <div className={`carousel-slide`}>
-            <div className={`item ${currentSlide == 2 ? "current" : ""}`}>
+            <div className={`item ${currentSlide == 1 ? "current" : ""}`}>
                 Project 3
             </div>
           </div>
           <div className={`carousel-slide`}>
-            <div className={`item ${currentSlide == 3 ? "current" : ""}`}>
+            <div className={`item ${currentSlide == 2 ? "current" : ""}`}>
                 Project 4
             </div>
           </div>
           <div className={`carousel-slide`}>
-            <div className={`item ${currentSlide == 4 ? "current" : ""}`}>Project 5</div>
+            <div className={`item ${currentSlide == 3 ? "current" : ""}`}>Project 5</div>
           </div>
           {/* Add more slides as needed */}
         </div>
