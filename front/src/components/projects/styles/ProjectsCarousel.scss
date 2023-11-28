@@ -1,35 +1,64 @@
-.project-carousel-wrapper {
+.carousel-container {
+  position: relative;
+  margin: auto;
   overflow: hidden;
-  width: 100%;
+
+  .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-slide {
+    flex: 0 0 33.33%; /* Adjust the width based on the number of slides you want to show */
+    box-sizing: border-box;
+    height: 300px; /* Set your desired height */
+    background-color: #ddd; /* Set your slide background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333; /* Set your text color */
+  }
+
+  .carousel-slide.current {
+    flex: 0 0 33.33%; /* Adjust the width based on the number of slides you want to show */
+    box-sizing: border-box;
+    height: 300px; /* Set your desired height */
+    background-color: #ddd; /* Set your slide background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333; /* Set your text color */
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff; /* Set your button background color */
+    color: #fff; /* Set your button text color */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .carousel-button:first-child {
+    left: 10px;
+  }
+
+  .carousel-button:last-child {
+    right: 10px;
+  }
 }
 
-.project-carousel-div {
-  display: flex;
-  flex-direction: row;
+.item {
+  flex:  0 0 20%;
+  background-color: blue;
+  transform: flex 2s ease-in-out, background-color 2s ease-in-out;
 }
 
-.project-carousel-item {
+.item.current {
+  flex: 0 0 50%;
   background-color: red;
-  transition: transform 2s ease, scale 2s ease, opacity 2s ease;
-  scale: 1;
-  opacity: 1;
-}
-
-.project-carousel-item.middle {
-  transform: translateX(0);
-  scale: 1.5;
-  transition: transform 2s ease, scale 2s ease, opacity 2s ease;
-  opacity: 1;
-}
-
-.project-carousel-item.left {
-  transform: translateX(-100%);
-  scale: 1;
-  opacity: 0.5;
-}
-
-.project-carousel-item.right {
-  transform: translateX(100%);
-  scale: 1;
-  opacity: 0.5;
+  color: green;
 }

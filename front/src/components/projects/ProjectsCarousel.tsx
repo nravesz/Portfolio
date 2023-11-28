@@ -38,92 +38,55 @@ const projects: IProject[] = [
 ];
 
 const ProjectsCarousel = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [activate, setActivate] = useState(false);
+    const [currentSlide, setCurrentSlide] = useState(0);
 
-    const getVisibleIndexes = () => {
-        const totalProjects = projects.length;
-        // (this % n) + n) % n
-        //const fadingLeftIndex = (((currentIndex - 2) % totalProjects) + totalProjects) % totalProjects;
-        const leftIndex = (((currentIndex - 1) % totalProjects) + totalProjects) % totalProjects;
-        const middleIndex = currentIndex;
-        const rightIndex = (((currentIndex + 1) % totalProjects) + totalProjects) % totalProjects;
-        //const fadingRightIndex = (((currentIndex + 2) % totalProjects) + totalProjects) % totalProjects;
-        //return [fadingLeftIndex, leftIndex, middleIndex, rightIndex, fadingRightIndex];
-        return [leftIndex, middleIndex, rightIndex];
-
+    const nextSlide = () => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % 3);
     };
-
-    const handleRightClick = () => {
-        const totalProjects = projects.length;
-        setCurrentIndex((((currentIndex + 1) % totalProjects) + totalProjects) % totalProjects);
-        setActivate(true);
+  
+    const prevSlide = () => {
+      setCurrentSlide((prevSlide) => (prevSlide - 1 + 3) % 3);
     };
-
-    const handleLeftClick = () => {
-        const totalProjects = projects.length;
-        setCurrentIndex((((currentIndex - 1) % totalProjects) + totalProjects) % totalProjects);
-        setActivate(true);
-    }
-
-    ///className={`carousel-item ${selectedItem === i ? 'selected' : ''}`}
-
-    return(
-        <div className="project-carousel-div">
-            {getVisibleIndexes().map((index, i) => (
-                (i === 0 ? (
-                    <div
-                        key={index}
-                        className={`project-carousel-item ${activate ? 'left' : ''}`}
-                        // onTransitionEnd={() => setActivate(false)}
-                        onClick={() => handleLeftClick()}
-                    >
-                        {projects[index].name}
-                    </div>
-                ) : i === 1 ?(
-                    <div
-                    key={index}
-                    className={`project-carousel-item middle`}
-                >
-                    {projects[index].name}
-                </div>
-                ) : (
-                    <div
-                        key={index}
-                        className={`project-carousel-item ${activate ? 'right' : ''}`}
-                        // onTransitionEnd={() => setActivate(false)}
-                        onClick={() => handleRightClick()}
-                    >
-                        {projects[index].name}
-                    </div>
-                ))
-            ))}
-            {/* <div
-                key={0}
-                className={`project-carousel-item ${activate === true ? "left" : ""}`}
-                onClick={() => handleLeftClick()}
-                onTransitionEnd={() => console.log("termino")}
+  
+    return (
+      <div className="carousel-container">
+        <div className="carousel-slides" style={{ transform: `translateX(-${currentSlide * 33.33}%)` }}>
+          {/* Your carousel slides go here */}
+          <div className={`carousel-slide`}
+          >
+            <div className={`item ${currentSlide == 0 ? "current" : ""}`}
             >
-                {projects[getVisibleIndexes()[0]].name}
+                Project 1
             </div>
-
-            <div
-                key={1}
-                className={`project-carousel-item middle`}
-            >
-                {projects[getVisibleIndexes()[1]].name}
+          </div>
+          <div className={`carousel-slide`}>
+            <div className={`item ${currentSlide == 1 ? "current" : ""}`}>
+                Project 2
             </div>
-
-            <div
-                key={2}
-                className={`project-carousel-item ${activate === true ? "right" : ""}`}
-                onClick={() => handleRightClick()}
-                onTransitionEnd={() => console.log("termino")}
-            >
-                {projects[getVisibleIndexes()[2]].name}
-            </div> */}
+           </div>
+          <div className={`carousel-slide`}>
+            <div className={`item ${currentSlide == 2 ? "current" : ""}`}>
+                Project 3
+            </div>
+          </div>
+          <div className={`carousel-slide`}>
+            <div className={`item ${currentSlide == 3 ? "current" : ""}`}>
+                Project 4
+            </div>
+          </div>
+          <div className={`carousel-slide`}>
+            <div className={`item ${currentSlide == 4 ? "current" : ""}`}>Project 5</div>
+          </div>
+          {/* Add more slides as needed */}
         </div>
-    )
-};
+        <button className="carousel-button" onClick={prevSlide}>
+          Prev
+        </button>
+        <button className="carousel-button" onClick={nextSlide}>
+          Next
+        </button>
+      </div>
+    );
+  };
 
 export default ProjectsCarousel;
