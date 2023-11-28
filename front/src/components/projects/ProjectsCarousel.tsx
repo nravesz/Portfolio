@@ -54,13 +54,16 @@ const ProjectsCarousel = () => {
           {/* Your carousel slides go here */}
           <div className={`carousel-slide`}
           >
-            <div className={`item ${currentSlide == 4 ? "current" : ""}`}
+            <div
+              className={`item ${currentSlide == 4 ? "current" : ""}`}
+              style={{transform: `${currentSlide == 4 ? "scale(2)" : "scale(1)"}`}}
             >
                 Project 1
             </div>
           </div>
           <div className={`carousel-slide`}>
-            <div className={`item ${currentSlide == 0 ? "current" : ""}`}>
+            <div className={`item ${currentSlide == 0 ? "current" : ""}`}
+            >
                 Project 2
             </div>
            </div>

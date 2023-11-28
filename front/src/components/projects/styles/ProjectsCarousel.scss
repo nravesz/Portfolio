@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
     color: #333; /* Set your text color */
+    transition: transform 0.5s ease-in-out;
   }
 
   .carousel-slide.current {
@@ -53,11 +54,11 @@
 .item {
   flex:  0 0 100%;
   background-color: blue;
-  transition: flex 2s ease-in-out, background-color 2s ease-in-out;
+  transition: background-color 2s ease-in-out,scale 2s ease-in-out;
 }
 
 .item.current {
-  flex: 0 0 150%;
+  scale: 1.5;
   background-color: red;
   color: green;
 }
