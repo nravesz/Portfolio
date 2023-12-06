@@ -1,0 +1,16 @@
+.project-carousel-div {
+    background: linear-gradient(to right, #3498db 50%, #e74c3c 50%);
+    width: 100vw;
+    height: 100vh;
+};
+
+.project-carousel-slides-div {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-carousel-slide {
+    flex: 0 0 33.333%;
+}
