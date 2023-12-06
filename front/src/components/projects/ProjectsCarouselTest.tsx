@@ -48,11 +48,22 @@ const ProjectsCarouselTest = () => {
         setCurrentSlide((prevSlide) => (prevSlide - 1 + projects.length) % projects.length);
     };
 
+    const handleSlideClick = (index: number) => {
+        if (index === currentSlide + 1) {
+            nextSlide();
+        } else if (index === currentSlide - 1) {
+            prevSlide();
+        };
+    };
+
     return (
         <div className="project-carousel-div">
-            <div className="project-carousel-slides-div" style={{ transform: `translateX(${50 - 1 * 33.33}%)` }}>
+            <div className="project-carousel-slides-div" style={{ transform: `translateX(${50 - currentSlide * 33.33}%)` }}>
                 {projects.map((project, index) => (
-                    <div className="project-carousel-slide">
+                    <div 
+                        className="project-carousel-slide"
+                        onClick={() => handleSlideClick(index)}
+                    >
                         <ProjectCard project={projects[index]} />
                     </div>
                 ))}
