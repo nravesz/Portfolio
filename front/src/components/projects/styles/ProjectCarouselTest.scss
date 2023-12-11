@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.5s ease-in-out;
 }
 
 .project-carousel-slide {
@@ -17,4 +18,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    transition: transform 0.5s ease-in-out;
+};
+
+.project-carousel-slide.current {
+    transform: scale(1.5);
+};
