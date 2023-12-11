@@ -19,7 +19,13 @@ const ProjectCard = ({ project }: props) => {
         //     <div> { project.demo } </div>
         // </div>
         <div className="project-card-div">
-            <div> {project.name} </div>
+            <div className="project-card-name"> {project.name} </div>
+            <div className="project-card-stack"> {project.stack.join(" | ")} </div>
+            <div className="project-card-description"> {project.description} </div>
+            <div className="project-card-links">
+                <button>Repositorio</button>
+                {project.hasDemo && <button> Visitar </button>}
+            </div>
         </div>
     );
 };

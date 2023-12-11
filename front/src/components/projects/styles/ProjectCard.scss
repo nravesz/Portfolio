@@ -25,7 +25,7 @@
 
 .project-card-div {
     background-color: $card-color;
-    width: 200px;
+    width: div(100%, 3);
     height: 200px;
     margin-top: 15px;
     border-radius: 20px
@@ -38,6 +38,13 @@
     font-weight: bold;
 };
 
-.project-card-description {
-    color: $subtitle-color;
+.project-card-stack {
+    font-size: 15px;
 };
+
+.project-card-description {
+    font-size: 15px;
+    overflow-y: auto;
+    height: 20px;
+};
+
