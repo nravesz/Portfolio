@@ -58,9 +58,10 @@ const ProjectsCarouselTest = () => {
 
     return (
         <div className="project-carousel-div">
-            <div className="project-carousel-slides-div" style={{ transform: `translateX(${50 - currentSlide * 33.33}%)` }}>
+            <div className="project-carousel-slides-div" style={{ transform: `translateX(${50 - currentSlide * (100/3)}%)` }}>
                 {projects.map((project, index) => (
-                    <div 
+                    <div
+                        key={index}
                         className="project-carousel-slide"
                         onClick={() => handleSlideClick(index)}
                     >
