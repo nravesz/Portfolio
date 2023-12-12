@@ -8,7 +8,7 @@ const projects: IProject[] = [
     {  
         stack: ["TypeScript", "React", "Sass"],
         name: "Monitor de Criptomonedas",
-        description: description,
+        description: description + "\n\n" + description + "\n\n" + description,
         repository: "repo",
         hasDemo: true,
         demo: "demo"
@@ -18,7 +18,7 @@ const projects: IProject[] = [
         name: "Manager de personajes de Genshin Impact",
         description: description,
         repository: "repo",
-        hasDemo: true,
+        hasDemo: false,
         demo: "demo"
     },
     {  

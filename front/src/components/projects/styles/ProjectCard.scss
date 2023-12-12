@@ -1,37 +1,18 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/fonts.scss";
 
-// $edge-size: 40px;
-
-// // $div-width: 300px;
-// $div-width: 50%;
-// $edge-porcent-size-width: $edge-size / $div-width * 100%;
-
-// $div-height: 300px;
-// $edge-porcent-size-height: $edge-size / $div-height * 100%;
-
-// .project-card-div {
-//     width: $div-width;
-//     height: $div-height;
-//     background-color: red;
-//     clip-path: polygon(
-//         0% 0%,
-//         calc(100% - $edge-porcent-size-width) 0%,
-//         100% $edge-porcent-size-height,
-//         100% 100%,
-//         $edge-porcent-size-width 100%,
-//         0% calc(100% - $edge-porcent-size-height));
-// };
-
 .project-card-div {
+    display: flex;
+    flex-direction: column;
     background-color: $card-color;
     width: div(100%, 3);
-    height: 200px;
+    height: 400px;
     margin-top: 15px;
     border-radius: 20px
 };
 
 .project-card-name {
+    padding: 5px;
     color: white;
     font-family: $title-family;
     font-size: 30px;
@@ -43,8 +24,9 @@
 };
 
 .project-card-description {
+    //flex: 3;
     font-size: 15px;
     overflow-y: auto;
-    height: 20px;
+    white-space: pre-wrap;
 };
 
