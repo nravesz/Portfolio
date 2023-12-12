@@ -1,29 +1,35 @@
 @import "../../../styles/colors.scss";
-
-// $edge-size: 40px;
-
-// // $div-width: 300px;
-// $div-width: 50%;
-// $edge-porcent-size-width: $edge-size / $div-width * 100%;
-
-// $div-height: 300px;
-// $edge-porcent-size-height: $edge-size / $div-height * 100%;
-
-// .project-card-div {
-//     width: $div-width;
-//     height: $div-height;
-//     background-color: red;
-//     clip-path: polygon(
-//         0% 0%,
-//         calc(100% - $edge-porcent-size-width) 0%,
-//         100% $edge-porcent-size-height,
-//         100% 100%,
-//         $edge-porcent-size-width 100%,
-//         0% calc(100% - $edge-porcent-size-height));
-// };
-
+@import "../../../styles/fonts.scss";
+//#dbd3ff
 .project-card-div {
-    background-color: $primary-color;
-    width: 50%;
-    height: 200px;
-}
+    display: flex;
+    flex-direction: column;
+    //background-color: #dbd3ff;
+    //background-color: linear-gradient(45deg, rgba(104,60,228,1) 0%, rgba(153,173,255,1) 50%, rgba(16,229,178,1) 100%);
+    backdrop-filter: blur(10px);
+    width: div(100%, 3);
+    height: 400px;
+    margin-top: 15px;
+    border-radius: 20px;
+};
+
+.project-card-name {
+    padding: 5px;
+    color: $primary-color;
+    font-family: $title-family;
+    font-size: 30px;
+    font-weight: bold;
+};
+
+.project-card-stack {
+    font-size: 15px;
+};
+
+.project-card-description {
+    //flex: 3;
+    font-size: 15px;
+    color: $primary-color;
+    overflow-y: auto;
+    white-space: pre-wrap;
+};
+
