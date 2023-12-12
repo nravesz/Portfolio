@@ -1,19 +1,21 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/fonts.scss";
-
+//#dbd3ff
 .project-card-div {
     display: flex;
     flex-direction: column;
-    background-color: $card-color;
+    //background-color: #dbd3ff;
+    //background-color: linear-gradient(45deg, rgba(104,60,228,1) 0%, rgba(153,173,255,1) 50%, rgba(16,229,178,1) 100%);
+    backdrop-filter: blur(10px);
     width: div(100%, 3);
     height: 400px;
     margin-top: 15px;
-    border-radius: 20px
+    border-radius: 20px;
 };
 
 .project-card-name {
     padding: 5px;
-    color: white;
+    color: $primary-color;
     font-family: $title-family;
     font-size: 30px;
     font-weight: bold;
@@ -26,6 +28,7 @@
 .project-card-description {
     //flex: 3;
     font-size: 15px;
+    color: $primary-color;
     overflow-y: auto;
     white-space: pre-wrap;
 };
