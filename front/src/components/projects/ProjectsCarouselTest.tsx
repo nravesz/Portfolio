@@ -62,13 +62,6 @@ const ProjectsCarouselTest = () => {
         <div className="project-carousel-div">
             <div className="project-carousel-slides-div" style={{ transform: `translateX(${50 - currentSlide * (100/3)}%)` }}>
                 {projects.map((project, index) => (
-                    // <div
-                    //     key={index}
-                    //     className={`project-carousel-slide ${currentSlide === index ? "current" : ""}`}
-                    //     onClick={() => handleSlideClick(index)}
-                    // >
-                    //     <ProjectCard project={projects[index]} />
-                    // </div>
                     <div
                         key={index}
                         className={`project-carousel-slide ${index === currentSlide ? "current" : ""}
@@ -77,31 +70,6 @@ const ProjectsCarouselTest = () => {
                     >
                         <ProjectCard project={projects[index]} />
                     </div>
-                    // (index === currentSlide) ? (
-                    //     <div
-                    //     key={index}
-                    //     className={`project-carousel-slide ${"current"}`}
-                    //     onClick={() => handleSlideClick(index)}
-                    //     >
-                    //         <ProjectCard project={projects[index]} />
-                    //     </div>
-                    // ) : index === currentSlide + 1 || index === currentSlide - 1 ? (
-                    //     <div
-                    //         key={index}
-                    //         className={`project-carousel-slide ${"sides"}`}
-                    //         onClick={() => handleSlideClick(index)}
-                    //     >
-                    //         <ProjectCard project={projects[index]} />
-                    //     </div>
-                    // ) : (
-                    //     <div
-                    //         key={index}
-                    //         className={`project-carousel-slide ${""}`}
-                    //         onClick={() => handleSlideClick(index)}
-                    //     >
-                    //         <ProjectCard project={projects[index]} />
-                    //      </div>
-                    // )))
                 ))}
             </div>
         </div>
