@@ -1,12 +1,17 @@
+import React, { ReactNode } from "react";
 import "./styles/ProjectCardButton.scss";
 
-type props = {
-    title: string
+type Props = {
+    title: string,
+    icon: ReactNode
 }
 
-const ProjectCardButton = ({title}: props) => {
+const ProjectCardButton = ({title, icon}: Props) => {
     return (
-        <button className="project-card-button">{ title }</button>
+        <button className="project-card-button">
+            <div className="project-card-button-title">{ title }</div>
+            {icon}
+        </button>
     );
 };
 

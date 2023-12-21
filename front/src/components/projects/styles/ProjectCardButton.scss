@@ -2,6 +2,9 @@
 @import "../../../styles/fonts.scss";
 
 .project-card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: $title-family;
     color: $primary-color;
     background-color: transparent;
@@ -10,6 +13,10 @@
     border-color: $primary-color;
     border-radius: 10px;
 };
+
+.project-card-button-title {
+    margin-right: 3px;
+}
 
 .project-card-button:hover {
     color: white;
