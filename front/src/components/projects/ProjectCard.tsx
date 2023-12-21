@@ -1,4 +1,4 @@
-import { IProject } from ".";
+import { IProject, ProjectCardButton } from ".";
 import "./styles/ProjectCard.scss";
 
 const name = "Project Name";
@@ -23,8 +23,8 @@ const ProjectCard = ({ project }: props) => {
             <div className="project-card-stack"> {project.stack.join(" | ")} </div>
             <div className="project-card-description"> {project.description} </div>
             <div className="project-card-links">
-                <button>Repositorio</button>
-                {project.hasDemo && <button> Visitar </button>}
+                <ProjectCardButton title="Repository" />
+                {project.hasDemo && <ProjectCardButton title="Visit" />}
             </div>
         </div>
     );
