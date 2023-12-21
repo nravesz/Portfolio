@@ -1,0 +1,28 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/fonts.scss";
+
+.project-card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $title-family;
+    color: $primary-color;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $primary-color;
+    border-radius: 10px;
+};
+
+.project-card-button-title {
+    margin-right: 3px;
+}
+
+.project-card-button:hover {
+    color: white;
+    background-color: $primary-color;
+};
+
+.project-card-button:active {
+    opacity: 0.5;
+};

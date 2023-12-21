@@ -64,7 +64,8 @@ const ProjectsCarouselTest = () => {
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className={`project-carousel-slide ${currentSlide === index ? "current" : ""}`}
+                        className={`project-carousel-slide ${index === currentSlide ? "current" : ""}
+                        ${index === currentSlide + 1 || index === currentSlide - 1 ? "sides" : ""}`}
                         onClick={() => handleSlideClick(index)}
                     >
                         <ProjectCard project={projects[index]} />

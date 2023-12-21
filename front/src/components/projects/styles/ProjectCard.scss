@@ -1,6 +1,8 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/fonts.scss";
-//#dbd3ff
+
+$padding: 15px;
+
 .project-card-div {
     display: flex;
     flex-direction: column;
@@ -11,7 +13,13 @@
     height: 400px;
     margin-top: 15px;
     border-radius: 20px;
+    border: 3px solid $primary-color;
+    padding: 5px;
 };
+
+.project-card-div-inactive {
+    
+}
 
 .project-card-name {
     padding: 5px;
@@ -21,8 +29,29 @@
     font-weight: bold;
 };
 
-.project-card-stack {
+.project-card-stack-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    padding: 5px;
+};
+
+.project-card-stack-title {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-family: $title-family;
+    color: $primary-color;
     font-size: 15px;
+    padding-inline: $padding;
+};
+
+.project-card-stack {
+    color: $primary-color;
+    font-size: 15px;
+    padding-inline: $padding;
 };
 
 .project-card-description {
@@ -31,5 +60,26 @@
     color: $primary-color;
     overflow-y: auto;
     white-space: pre-wrap;
+    padding: $padding;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    };
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    };
+
+    &::-webkit-scrollbar-thumb {
+        background: $primary-color;
+    };
 };
 
+.project-card-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    padding: 5px;
+};
