@@ -1,3 +1,6 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/fonts.scss";
+
 .about-basic-info-div {
     display: flex;
     flex-direction: column;
@@ -13,9 +16,25 @@
     border: 1px solid #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease-in-out;
-    filter: grayscale(100%);
+    //filter: grayscale(100%);
+    filter: hue-rotate(50deg);
     cursor: pointer;
+    margin-bottom: 7px;
     &:hover {
         transform: scale(1.1);
     };
 };
+
+.about-basic-info-name {
+    color: $primary-color;
+    font-family: $title-family;
+    font-size: $subtitle-size;
+    font-weight: bold;
+};
+
+.about-basic-info-title {
+    color: $tertiary-color;
+    font-family: $title-family;
+    font-size: 20px;
+    font-weight: bold;
+}
