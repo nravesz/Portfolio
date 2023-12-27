@@ -2,7 +2,7 @@ import Home from "./Home";
 import TitleText from "./TitleText";
 import PresentationText from "./PresentationText";
 
-export  {
+export {
     Home,
     TitleText,
     PresentationText

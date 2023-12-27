@@ -1,0 +1,14 @@
+.about-div {
+    display: flex;
+    justify-content: center;
+};
+
+.about-div.basic-info {
+    display: flex;
+    flex: 1;
+};
+
+.about-div.descrption {
+    display: flex;
+    flex: 2;
+};

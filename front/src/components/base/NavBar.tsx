@@ -14,7 +14,12 @@ const NavBar = () => {
         <div className="nav-bar-div">
             <NavBarButton
                 name="Home"
-                route="home"
+                route={routes.HOME}
+                handleClick={handleClick}
+            />
+            <NavBarButton
+                name="About"
+                route={routes.ABOUT}
                 handleClick={handleClick}
             />
             <NavBarButton
