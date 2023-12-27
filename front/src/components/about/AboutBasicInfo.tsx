@@ -6,8 +6,8 @@ const AboutBasicInfo = () => {
     return (
         <div className="about-basic-info-div">
             <img className="about-basic-info-image" src={potrait}/>
-            <div>Nicole Raveszani</div>
-            <div>Computer Engineering Student</div>
+            <div className="about-basic-info-name">Nicole Raveszani</div>
+            <div className="about-basic-info-title">Computer Engineering Student</div>
         </div>
     );
 };
