@@ -1,0 +1,9 @@
+@import "../../../styles/colors.scss";
+
+.divider {
+    border-top: 2px solid $tertiary-color;
+    opacity: 80%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    //margin: 10%;
+};

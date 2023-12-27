@@ -56,7 +56,7 @@ $padding: 15px;
 
 .project-card-description {
     //flex: 3;
-    font-size: 15px;
+    font-size: $text-size;
     color: $primary-color;
     overflow-y: auto;
     white-space: pre-wrap;
