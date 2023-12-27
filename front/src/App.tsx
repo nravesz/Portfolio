@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout, NavBar } from "../src/components/base";
-import { routes, HomePage, ProjectsPage, ContactPage } from './pages';
+import { routes, HomePage, AboutPage, ProjectsPage, ContactPage } from './pages';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
             <Route>
               <Route index element={<HomePage />} />
               <Route path={routes.HOME} element={<HomePage />} />
+              <Route path={routes.ABOUT} element={<AboutPage />} />
               <Route path={routes.PROJECTS} element={<ProjectsPage />} />
               <Route path={routes.CONTACT} element={<ContactPage />} />
             </Route>
