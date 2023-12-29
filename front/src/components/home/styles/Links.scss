@@ -1,0 +1,16 @@
+@import "../../../styles/fonts.scss";
+@import "../../../styles/colors.scss";
+
+.links-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+};
+
+.links-div p {
+    font-size: 20px;
+    font-family: $title-family;
+    font-weight: bold;
+    color: $text;
+    margin-right: 20px;
+};
