@@ -27,11 +27,6 @@ const NavBar = () => {
                 route={routes.PROJECTS}
                 handleClick={handleClick}
             />
-            <NavBarButton
-                name="Contact"
-                route="contact"
-                handleClick={handleClick}
-            />
         </div>
     );
 };
