@@ -1,4 +1,4 @@
-import { ProjectCard, IProject, ProjectsCarousel, ProjectsCarouselTest,  } from ".";
+import { IProject, ProjectsCarousel } from ".";
 import "./styles/Projects.scss";
 import "../../styles/common.scss";
 import { Divider } from "../common";
@@ -19,18 +19,8 @@ const Projects = () => {
             <div className="general-div">
                 <div className='title'> Projects </div>
                 <Divider />
-                {/* <div className="projects-div">
-                    <ProjectCard project={project} />
-                    <ProjectCard project={project} />
-                    <ProjectCard project={project} />
-                    <ProjectCard project={project} />
-                    <ProjectCard project={project} />
-                    <ProjectCard project={project} />
-                    <ProjectCard project={project} />
-                </div> */}
             </div>
-        {/* <ProjectsCarousel /> */}
-        <ProjectsCarouselTest />
+        <ProjectsCarousel />
         </div>
     );
 };
