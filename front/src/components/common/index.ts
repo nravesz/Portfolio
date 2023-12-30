@@ -1,3 +1,4 @@
+import Page from "./Page";
 import Divider from "./Divider";
 
-export { Divider };
+export { Page, Divider };

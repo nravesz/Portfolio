@@ -1,14 +1,14 @@
-@import "./colors.scss";
-@import "./fonts.scss";
+@import "../../../styles/colors.scss";
+@import "../../../styles/fonts.scss";
 
-.title {
+.page-title {
     font-size: 50px;
     font-family: $title-family;
     font-weight: bold;
     color: $primary-color;
 };
 
-.general-div {
+.page-div {
     padding-left: 10%;
     padding-right: 10%;
 };
