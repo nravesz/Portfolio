@@ -9,9 +9,6 @@
 //     height: 100vh;
 // };
 
-.body {
-    background-color: black;
-};
 
 // .layout-div {
 //     width: 100vw;
@@ -30,11 +27,10 @@
 // };
 
 .layout-div {
+    position: relative;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
-    //background: $background;
-    overflow-y: auto;
-    position: relative;
 };
 
 .layout-base,
@@ -50,12 +46,17 @@
 .layout-base {
     background: $background;
     z-index: -2;
-  }
+}
   
-  .layout-animated {
+.layout-animated {
     background: radial-gradient(circle at 0% 100%, red, transparent 500px);
     z-index: -1;
-  }
+}
+
+.content {
+    overflow-y: auto;
+    height: 100%;
+}
 
 
 // .layout-base {
