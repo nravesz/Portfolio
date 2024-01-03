@@ -44,48 +44,35 @@
 };
 
 .layout-base {
-    background: $background;
-    z-index: -2;
-}
-  
-.layout-animated {
-    background: radial-gradient(circle at 0% 100%, red, transparent 500px);
+    background: url("../../../assets/fiuba.jpg") no-repeat center fixed;
+    background-size: cover;
     z-index: -1;
-}
+
+    &:before,
+    &:after {
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    };
+
+    &:before {
+        //background-color: #01C38D;
+        background-color: $primary-color;
+        mix-blend-mode: darken;
+    };
+
+    &:after {
+        background-color: $tertiary-color;
+        //background-color: #481768;
+        mix-blend-mode: lighten;
+    };
+};
 
 .content {
     overflow-y: auto;
     height: 100%;
-}
-
-
-// .layout-base {
-//     width: 100vw;
-//     height: 100vh;
-//     background: $background;
-//     overflow-y: auto;
-//     position: absolute;
-//     z-index: -2;
-// };
-
-// .layout-animated {
-//     //animation: layout 1s ease-in-out;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 100vh;
-//     background: radial-gradient(circle at 0% 100%, red, transparent 500px);
-//     z-index: -1;
-//     position: absolute;
-//     overflow-y: auto;
-// };
-
-@keyframes layout {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 };
