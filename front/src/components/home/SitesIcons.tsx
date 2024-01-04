@@ -1,4 +1,4 @@
-import { ISiteIcon } from ".";
+import { ISiteIcon, SiteIcon } from ".";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import "./styles/SitesIcons.scss";
@@ -30,15 +30,7 @@ const SitesIcons = () => {
         <div className="sites-icons-div">
             {icons.map((icon: ISiteIcon) => {
                 return (
-                    <a
-                        href={icon.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        style={{color: icon.color}}
-                        className="icons"
-                    >
-                        {icon.icon}
-                    </a>
+                    <SiteIcon data={icon} />
                 );
             })}
         </div>
