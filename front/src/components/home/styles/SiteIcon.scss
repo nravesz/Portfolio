@@ -5,7 +5,8 @@ $icon-size: 40px;
 .icons {
     font-size: $icon-size;
     padding-top: 5px;
-    color:lightgray;
+    //color:lightgray;
+    color:$tertiary-color;
     z-index: 1;
 };
 
@@ -21,7 +22,6 @@ $icon-size: 40px;
     transition: 1s ease-in-out;
 
     &:hover {
-        //animation: rotate 2s ease-in-out;
         rotate: 45deg;
         scale: 1.1;
     }
@@ -43,13 +43,4 @@ $icon-size: 40px;
         transform: rotate(-60deg);
     };
 
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    };
-    100% {
-        transform: rotate(45deg);
-    };
-}
+};
