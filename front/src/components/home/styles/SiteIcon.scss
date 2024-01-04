@@ -1,0 +1,23 @@
+@import "../../../styles/colors.scss";
+
+$icon-size: 60px;
+
+.icon-div {
+    background-color: $primary-color;
+    width: $icon-size;
+    height: $icon-size;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+};
+
+.icons {
+    font-size: 40px;
+    line-height: 100px;
+    &:hover {
+        font-size: 35px;
+    }
+};

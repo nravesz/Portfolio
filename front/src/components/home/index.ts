@@ -4,6 +4,7 @@ import PresentationText from "./PresentationText";
 import Links from "./Links";
 import ISiteIcon from "./ISiteIcon";
 import SitesIcons from "./SitesIcons";
+import SiteIcon from "./SiteIcon";
 
 export {
     Home,
@@ -11,5 +12,6 @@ export {
     Links,
     type ISiteIcon,
     SitesIcons,
-    PresentationText
+    PresentationText,
+    SiteIcon
 };
