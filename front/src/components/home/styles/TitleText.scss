@@ -2,6 +2,10 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/colors.scss';
 
+p {
+    font-family: $title-family;
+};
+
 .title-text-div {
     text-align: left;
     justify-content: center;
@@ -9,14 +13,20 @@
 
 .title-text-name {
     font-size: 30px;
-    font-family: $title-family;
-    color: $subtitle-color;
     font-weight: bold;
+};
+
+.title-neutral {
+    color: $secondary-color;
+}
+
+.title-styled {
+    color: $primary-color;
 };
 
 .title-text-rol {
     font-size: 70px;
-    font-family: $title-family;
     color: $primary-color;
     font-weight: bold;
+    white-space: pre-wrap;
 }

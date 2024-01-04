@@ -6,11 +6,6 @@ import { routes, HomePage, AboutPage, ProjectsPage } from './pages';
 
 function App() {
   return (
-    // <div className="App">
-    //   <Home />
-    // </div>
-
-
       <BrowserRouter>
         <Layout>
           <NavBar />

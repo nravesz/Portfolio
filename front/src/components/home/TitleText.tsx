@@ -3,9 +3,12 @@ import "./styles/TitleText.scss";
 const TitleText = () => {
     return (
         <div className="title-text-div" >
-            <div className="title-text-name" > Hi, I am Nicole Raveszani </div>
-            <div className="title-text-rol" > A Computer Engineering </div>
-            <div className="title-text-rol" > Student </div>
+            <p className= "title-text-name ">
+                <span className="title-neutral">Hi, I am </span>
+                <span className="title-styled">Nicole Raveszani</span>
+
+            </p>
+            <p className="title-text-rol" >A Computer Engineering<br/>Student</p>
         </div>
     );
 };
