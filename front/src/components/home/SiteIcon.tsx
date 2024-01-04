@@ -22,7 +22,7 @@ const SiteIcon = ({data}: Props) => {
                     href={data.url}
                     target="_blank"
                     rel="noreferrer"
-                    style={{color: data.color}}
+                    //style={{color: data.color}} 
                     className="icons"
                 >
                     <div>
