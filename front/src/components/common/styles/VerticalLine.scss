@@ -1,0 +1,7 @@
+@import "../../../styles/colors.scss";
+
+.vertical-line {
+    border-left: 2px solid $primary-color;
+    height: 100%;
+    //height: 30px;
+};

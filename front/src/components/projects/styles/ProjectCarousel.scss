@@ -2,18 +2,18 @@
 
 .project-carousel-div {
     //background: linear-gradient(to right, #3498db 50%, #e74c3c 50%); //TODO: remove
+    //overflow: hidden;
+    //width: 100vw;
+    //height: 100vh;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
 };
 
 .project-carousel-slides-div {
-    //background-color: green; //TODO: remove
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease-in-out;
-    height: 100vh;
+    height: 75vh;
     position: relative;
 }
 
@@ -21,7 +21,7 @@
     flex: 0 0 33.33%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     transition: transform 0.5s ease-in-out;
     z-index: 1;
 };
