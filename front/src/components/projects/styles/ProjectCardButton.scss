@@ -12,17 +12,20 @@
     border-style: solid;
     border-color: $primary-color;
     border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    
+    &:hover {
+        color: white;
+        background-color: $primary-color;
+        box-shadow: 0px 0px 2px 0px $primary-color;
+        transform: scale(1.1);
+    };
+
+    &:active {
+        opacity: 0.5;
+    };
 };
 
 .project-card-button-title {
     margin-right: 3px;
 }
-
-.project-card-button:hover {
-    color: white;
-    background-color: $primary-color;
-};
-
-.project-card-button:active {
-    opacity: 0.5;
-};
