@@ -8,13 +8,14 @@ $padding: 15px;
     flex-direction: column;
     //background-color: #dbd3ff;
     //background-color: linear-gradient(45deg, rgba(104,60,228,1) 0%, rgba(153,173,255,1) 50%, rgba(16,229,178,1) 100%);
-    backdrop-filter: blur(10px);
+    //backdrop-filter: blur(10px);
     width: div(100%, 3);
-    height: 400px;
+    height: 350px;
     margin-top: 15px;
     border-radius: 20px;
     border: 3px solid $primary-color;
     padding: 5px;
+    background-color: $tertiary-color;
 };
 
 .project-card-div-inactive {
@@ -49,7 +50,7 @@ $padding: 15px;
 };
 
 .project-card-stack {
-    color: $primary-color;
+    color: white;
     font-size: 15px;
     padding-inline: $padding;
 };
@@ -57,7 +58,7 @@ $padding: 15px;
 .project-card-description {
     //flex: 3;
     font-size: $text-size;
-    color: $primary-color;
+    color: white;
     overflow-y: auto;
     white-space: pre-wrap;
     padding: $padding;
