@@ -1,14 +1,6 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/fonts.scss";
 
-p {
-    color: lightgray;
-    white-space: pre-wrap;
-    font-size: 20px;
-    line-height: 30px;
-    text-indent: 50px;
-}
-
 span {
     color: $primary-color;
 };
@@ -23,3 +15,11 @@ span {
         text-decoration: underline;
     };
 };
+
+.about-description-text {
+    color: lightgray;
+    white-space: pre-wrap;
+    font-size: 20px;
+    line-height: 30px;
+    text-indent: 50px;
+}

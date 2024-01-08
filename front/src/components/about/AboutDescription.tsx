@@ -5,12 +5,12 @@ import routes from "../../pages/routes"
 const AboutDescription = () => {
     return (
         <div>
-            <p>
+            <p className="about-description-text">
                 I am a student of <span>Computer Engineering</span> at the <span>University 
                 of Buenos Aires</span>. I am currently in my last year of my degree.
             </p>
 
-            <p>
+            <p className="about-description-text">
                 In college I have learned to design and implement solutions to 
                 technological problems. I have acquired the ability to learn 
                 continuously and autonomously. Also to work in a team, to 
@@ -18,7 +18,7 @@ const AboutDescription = () => {
                 to be delivered on a certain date under certain quality requirements.
             </p>
 
-            <p>
+            <p className="about-description-text">
                 I invite you to visit the{' '}
                 <Link to={`${routes.PROJECTS}`} className="link">
                     Projects
