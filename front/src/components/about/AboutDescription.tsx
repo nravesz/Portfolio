@@ -1,12 +1,30 @@
 import "./styles/AboutDescription.scss";
-
-const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
-//TODO: remove
+import { Link } from 'react-router-dom';
+import routes from "../../pages/routes"
 
 const AboutDescription = () => {
     return (
-        <div className="about-description-div">
-            { description + "\n\n" + description }
+        <div>
+            <p>
+                I am a student of <span>Computer Engineering</span> at the <span>University 
+                of Buenos Aires</span>. I am currently in my last year of my degree.
+            </p>
+
+            <p>
+                In college I have learned to design and implement solutions to 
+                technological problems. I have acquired the ability to learn 
+                continuously and autonomously. Also to work in a team, to 
+                organize myself with different people, to plan a project together 
+                to be delivered on a certain date under certain quality requirements.
+            </p>
+
+            <p>
+                I invite you to visit the{' '}
+                <Link to={`${routes.PROJECTS}`} className="link">
+                    Projects
+                </Link> 
+                {' '}section to see some of the projects I made.
+            </p>
         </div>
     );
 };
