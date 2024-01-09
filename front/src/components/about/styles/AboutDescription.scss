@@ -1,12 +1,25 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/fonts.scss";
 
-//rgb(147, 120, 179);
-//rgb(156, 124, 194);
+span {
+    color: $primary-color;
+};
 
-.about-description-div {
-    color:$text;
+.link {
+    color: $primary-color;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+    };
+};
+
+.about-description-text {
+    color: lightgray;
     white-space: pre-wrap;
     font-size: 20px;
     line-height: 30px;
-};
+    text-indent: 50px;
+}
