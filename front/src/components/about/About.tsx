@@ -1,5 +1,6 @@
 import { AboutBasicInfo, AboutDescription } from ".";
-import { Page } from "../common";
+import { Page, ISkillIcon, SkillIconList } from "../common";
+import skillList from "../../data/skillList";
 import "./styles/About.scss";
 
 const About = () => {
@@ -13,6 +14,8 @@ const About = () => {
                     <AboutDescription />
                 </div>
             </div>
+            <h2 className="about-skill-title">Skills</h2>
+            <SkillIconList skillIcons={skillList} />
         </Page>
     );
 };

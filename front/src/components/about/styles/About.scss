@@ -1,3 +1,6 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/fonts.scss";
+
 .about-div {
     display: flex;
     justify-content: center;
@@ -13,3 +16,8 @@
     display: flex;
     flex: 2;
 };
+
+.about-skill-title {
+    color: $primary-color;
+    font-size: $subtitle-size;
+}
