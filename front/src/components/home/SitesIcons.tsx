@@ -28,9 +28,12 @@ const SitesIcons = () => {
 
     return (
         <div className="sites-icons-div">
-            {icons.map((icon: ISiteIcon) => {
+            {icons.map((icon: ISiteIcon, index) => {
                 return (
-                    <SiteIcon data={icon} />
+                    <SiteIcon
+                        key={index}
+                        data={icon}
+                    />
                 );
             })}
         </div>

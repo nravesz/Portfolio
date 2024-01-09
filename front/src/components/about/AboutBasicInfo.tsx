@@ -9,7 +9,7 @@ const AboutBasicInfo = () => {
             <img className="about-basic-info-image" src={potrait}/>
             <div className="about-basic-info-name">Nicole Raveszani</div>
             <div className="about-basic-info-title">Computer Engineering Student</div>
-            <div style={{marginTop: "50px"}}>
+            <div style={{marginTop: "3vh"}}>
                 <CVButton />
             </div>
         </div>

@@ -1,3 +1,5 @@
+@import "../../../styles/variables.scss";
+
 img {
     width: 100%;
     aspect-ratio: 1/1;
@@ -12,4 +14,8 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(8%, 1fr));
     gap: 20px;
+
+    @media screen and (max-width: $max-width) {
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    };
 };

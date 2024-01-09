@@ -8,21 +8,10 @@ type Props = {
 const SiteIcon = ({data}: Props) => {
     return (
         <div className="icon-div">
-            {/* <a
-                href={data.url}
-                target="_blank"
-                rel="noreferrer"
-                style={{color: data.color}}
-                className="icons"
-            >
-                {data.icon}
-            </a> */}
-
                 <a
                     href={data.url}
                     target="_blank"
                     rel="noreferrer"
-                    //style={{color: data.color}} 
                     className="icons"
                 >
                     <div>
