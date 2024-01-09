@@ -29,4 +29,8 @@ p {
     color: $primary-color;
     font-weight: bold;
     white-space: pre-wrap;
+
+    @media screen and (max-width: $max-width) {
+        font-size: 50px;
+    };
 }
