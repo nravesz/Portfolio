@@ -1,4 +1,5 @@
 import { ISkillIcon } from "../components/common";
+// Source: https://devicon.dev/
 
 const skillList: ISkillIcon[] = [
     {
