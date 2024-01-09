@@ -7,7 +7,7 @@ type Props = {
 
 const SkillIconList = ({skillIcons}: Props) => {
     return (
-        <div>
+        <div className="skill-icon-list">
             {skillIcons.map((icon, index) => (
                 <SkillIcon key={index} skillIcon={icon} />
             ))}
