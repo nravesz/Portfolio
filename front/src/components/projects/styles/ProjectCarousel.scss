@@ -1,10 +1,6 @@
 @import "../../../styles/variables.scss";
 
 .project-carousel-div {
-    //background: linear-gradient(to right, #3498db 50%, #e74c3c 50%); //TODO: remove
-    //overflow: hidden;
-    //width: 100vw;
-    //height: 100vh;
     overflow: hidden;
 };
 
@@ -15,23 +11,30 @@
     transition: transform 0.5s ease-in-out;
     height: 75vh;
     position: relative;
+    @media screen and (max-width: $max-width) {
+        height: 70vh;
+    }
 }
 
 .project-carousel-slide {
-    flex: 0 0 33.33%;
+    width: calc(100vw / 3);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     transition: transform 0.5s ease-in-out;
     z-index: 1;
 };
 
 .project-carousel-slide.current {
     transform: scale(1.5);
-    z-index: 3;
+    z-index: 4;
 };
 
 .project-carousel-slide.sides {
+    transform: scale(1);
+    z-index: 3;
+};
+
+.project-carousel-slide.others {
     transform: scale(1);
     z-index: 2;
 };

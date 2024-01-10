@@ -1,21 +1,26 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/fonts.scss";
+@import "../../../styles/variables.scss";
 
 $padding: 15px;
 
 .project-card-div {
     display: flex;
     flex-direction: column;
-    //background-color: #dbd3ff;
-    //background-color: linear-gradient(45deg, rgba(104,60,228,1) 0%, rgba(153,173,255,1) 50%, rgba(16,229,178,1) 100%);
-    //backdrop-filter: blur(10px);
-    width: div(100%, 3);
+    //width: div(100%, 3);
+    width: 33.33vw;
     height: 350px;
     margin-top: 15px;
     border-radius: 20px;
     border: 3px solid $primary-color;
     padding: 5px;
     background-color: $tertiary-color;
+    z-index:inherit;
+    
+    @media screen and (max-width: $max-width) {
+        height: 300px;
+        width: 170px;
+    };
 };
 
 .project-card-div-inactive {
@@ -28,6 +33,10 @@ $padding: 15px;
     font-family: $title-family;
     font-size: 30px;
     font-weight: bold;
+    
+    @media screen and (max-width: $max-width) {
+        font-size: 20px;
+    };
 };
 
 .project-card-stack-div {
@@ -47,12 +56,19 @@ $padding: 15px;
     color: $primary-color;
     font-size: 15px;
     padding-inline: $padding;
+
+    @media screen and (max-width: $max-width) {
+        font-size: 15px;
+    };
 };
 
 .project-card-stack {
     color: white;
     font-size: 15px;
     padding-inline: $padding;
+    @media screen and (max-width: $max-width) {
+        font-size: 15px;
+    };
 };
 
 .project-card-description {
@@ -74,6 +90,15 @@ $padding: 15px;
     &::-webkit-scrollbar-thumb {
         background: $primary-color;
     };
+    @media screen and (max-width: $max-width) {
+        font-size: 10px;
+        text-align: justify;
+        text-justify: inter-word;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        };
+    };
 };
 
 .project-card-links {
@@ -84,4 +109,8 @@ $padding: 15px;
     flex: 1;
     padding-top: 10px;
     padding-bottom: 5px;
+
+    @media screen and (max-width: $max-width) {
+        width: 170px;
+    };
 };
