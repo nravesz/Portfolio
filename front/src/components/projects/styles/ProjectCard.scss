@@ -18,6 +18,7 @@ $padding: 15px;
     
     @media screen and (max-width: $max-width) {
         height: 300px;
+        width: 400px;
     };
 };
 
@@ -31,7 +32,7 @@ $padding: 15px;
     font-family: $title-family;
     font-size: 30px;
     font-weight: bold;
-
+    
     @media screen and (max-width: $max-width) {
         font-size: 20px;
     };
@@ -101,4 +102,8 @@ $padding: 15px;
     flex: 1;
     padding-top: 10px;
     padding-bottom: 5px;
+
+    @media screen and (max-width: $max-width) {
+        width: 170px;
+    };
 };
