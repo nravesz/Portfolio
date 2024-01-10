@@ -15,6 +15,7 @@ $padding: 15px;
     border: 3px solid $primary-color;
     padding: 5px;
     background-color: $tertiary-color;
+    z-index:inherit;
     
     @media screen and (max-width: $max-width) {
         height: 300px;

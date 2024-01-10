@@ -66,7 +66,8 @@ const ProjectsCarousel = () => {
                     <div
                         key={index}
                         className={`project-carousel-slide ${index === currentSlide ? "current" : ""}
-                        ${index === currentSlide + 1 || index === currentSlide - 1 ? "sides" : ""}`}
+                        ${index === currentSlide + 1 || index === currentSlide - 1 ? "sides" : ""}
+                        ${index === currentSlide + 2 || index === currentSlide - 2 ? "others" : ""}`}
                         onClick={() => handleSlideClick(index)}
                     >
                         <ProjectCard project={projects[index]} />
