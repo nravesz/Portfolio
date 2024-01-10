@@ -2,6 +2,8 @@
 
 .project-carousel-div {
     overflow: hidden;
+    animation: appear 1s ease-in-out 0.5s forwards;
+    opacity: 0;
 };
 
 .project-carousel-slides-div {
@@ -37,4 +39,13 @@
 .project-carousel-slide.others {
     transform: scale(1);
     z-index: 2;
+};
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    };
+    100% {
+        opacity: 1;
+    };
 };

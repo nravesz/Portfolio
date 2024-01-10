@@ -16,14 +16,34 @@
     display: flex;
     flex: 1;
     align-items: flex-start;
+    animation: appear 1s ease-in-out forwards;
+    opacity: 0;
 };
 
 .about-div.descrption {
     display: flex;
     flex: 2;
+    animation: appear 1s ease-in-out 0.5s forwards;
+    opacity: 0;
+};
+
+.about-div-skills {
+    animation: appear 1s ease-in-out 1s forwards;
+    opacity: 0;
 };
 
 .about-skill-title {
     color: $primary-color;
     font-size: $subtitle-size;
 }
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-10vw);
+    };
+    100% {
+        opacity: 1;
+        transform: translateY(0vw);
+    };
+};
