@@ -15,15 +15,19 @@
     transition: transform 0.5s ease-in-out;
     height: 75vh;
     position: relative;
+    @media screen and (max-width: $max-width) {
+        height: 70vh;
+    }
 }
 
 .project-carousel-slide {
-    flex: 0 0 33.33%;
+    width: calc(100vw / 3);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     transition: transform 0.5s ease-in-out;
     z-index: 1;
+    background-color: red;
 };
 
 .project-carousel-slide.current {
