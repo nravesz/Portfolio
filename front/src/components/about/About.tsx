@@ -14,8 +14,10 @@ const About = () => {
                     <AboutDescription />
                 </div>
             </div>
-            <h2 className="about-skill-title">Skills</h2>
-            <SkillIconList skillIcons={skillList} />
+            <div className="about-div-skills">
+                <h2 className="about-skill-title">Skills</h2>
+                <SkillIconList skillIcons={skillList} />
+            </div>
         </Page>
     );
 };
