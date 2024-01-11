@@ -27,7 +27,7 @@ const ProjectsCarousel = ({projects}: Props) => {
 
     return (
         <div className="project-carousel-div">
-            <div className="project-carousel-slides-div" style={{ transform: `translateX(${50 - currentSlide * (100/3)}%)` }}>
+            <div className="project-carousel-slides-div" style={{ transform: `translateX(${(projects.length - 1)*(100/3)/2 - currentSlide * (100/3)}%)` }}>
                 {projects.map((project, index) => (
                     <div
                         key={index}
