@@ -1,4 +1,6 @@
-const projects = [
+import { IProject } from "../components/projects";
+
+const projects: IProject[] = [
     {
         stack: ["TypeScript", "React", "Css", "Sass"],
         name: "Portfolio",
@@ -66,7 +68,7 @@ const projects = [
         stack: ["Python", "Pandas", "Seaborn"],
         name: "Data Analysis",
         description: "The factors influencing property prices in Mexico were analyzed from a dataset provided by a company. Based on this analysis, I participated with a team in a Kaggle competition created by the university to predict the prices of a set of properties. For this, we trained machine learning algorithms like Random Forest and XGBoost using the previous analysis to find the factors that help us to better predict the prices.",
-        highliths: ["dataset", "Kaggle competition", "machine learning algorithms"],
+        highlights: ["dataset", "Kaggle competition", "machine learning algorithms"],
         repository: "https://github.com/juankristal/7506-Datos",
         hasDemo: false,
         demo: ""
