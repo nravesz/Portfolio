@@ -2,45 +2,11 @@ import { useState } from "react";
 import { ProjectCard, IProject } from ".";
 import "./styles/ProjectCarousel.scss";
 
-const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
-//TODO: remove
+type Props = {
+    projects: IProject[];
+};
 
-const projects: IProject[] = [
-    {  
-        stack: ["TypeScript", "React", "Sass"],
-        name: "Monitor de Criptomonedas",
-        description: description + "\n\n" + description + "\n\n" + description,
-        repository: "repo",
-        hasDemo: true,
-        demo: "demo"
-    },
-    {  
-        stack: ["TypeScript", "React", "Sass"],
-        name: "Manager de personajes de Genshin Impact",
-        description: description,
-        repository: "repo",
-        hasDemo: false,
-        demo: "demo"
-    },
-    {  
-        stack: ["TypeScript", "React", "Sass"],
-        name: "Project 3",
-        description: description,
-        repository: "repo",
-        hasDemo: true,
-        demo: "demo"
-    },
-    {
-        stack: ["TypeScript", "React", "Sass"],
-        name: "Project 4",
-        description: description,
-        repository: "repo",
-        hasDemo: true,
-        demo: "demo"
-    }
-];
-
-const ProjectsCarousel = () => {
+const ProjectsCarousel = ({projects}: Props) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const nextSlide = () => {
@@ -61,7 +27,7 @@ const ProjectsCarousel = () => {
 
     return (
         <div className="project-carousel-div">
-            <div className="project-carousel-slides-div" style={{ transform: `translateX(${50 - currentSlide * (100/3)}%)` }}>
+            <div className="project-carousel-slides-div" style={{ transform: `translateX(${(projects.length - 1)*(100/3)/2 - currentSlide * (100/3)}%)` }}>
                 {projects.map((project, index) => (
                     <div
                         key={index}

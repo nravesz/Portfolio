@@ -1,5 +1,6 @@
 import { ProjectsCarousel } from ".";
 import { Page } from "../common";
+import projects from "../../data/projects";
 
 const Projects = () => {
     return (
@@ -7,7 +8,7 @@ const Projects = () => {
             <Page title="Projects">
                 <></>
             </Page>
-            <ProjectsCarousel />
+            <ProjectsCarousel projects={projects} />
         </div>
     );
 };
