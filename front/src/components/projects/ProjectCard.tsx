@@ -1,5 +1,6 @@
 import { IProject, ProjectCardButton } from ".";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
+import highlightText from "./ProjectCardHelper";
 import "./styles/ProjectCard.scss";
 
 const name = "Project Name";
@@ -18,7 +19,9 @@ const ProjectCard = ({ project }: props) => {
                 <div className="project-card-stack-title"> Stack </div>
                 <div className="project-card-stack"> {project.stack.join(" | ")} </div>
             </div>
-            <div className="project-card-description"> {project.description} </div>
+            <div className="project-card-description">
+                {highlightText(project.description, project.highlights)}
+            </div>
             <div className="project-card-links">
                 <ProjectCardButton
                     title="Repository"

@@ -2,6 +2,21 @@
 @import "../../../styles/fonts.scss";
 @import "../../../styles/variables.scss";
 
+p {
+    font-size: $text-size;
+    white-space: pre-wrap;
+    text-align: justify;
+    text-justify: inter-word;
+
+    @media screen and (max-width: $max-width) {
+        font-size: 10px;
+    };
+};
+
+.span {
+    color: $primary-color;
+};
+
 $padding: 15px;
 
 .project-card-div {

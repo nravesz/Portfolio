@@ -4,8 +4,8 @@ const projects: IProject[] = [
     {
         stack: ["TypeScript", "React", "Css", "Sass"],
         name: "Portfolio",
-        description: "This app was created as my portfolio. Each component was coded from zero without any external library to show my skills in FrontEnd. It is responsive, so you can try it on your mobile.",
-        highlights: ["without any external library", "FrontEnd", "responsive"],
+        description: "This app was created as my portfolio. Each component was coded from zero without any external library to show my skills in Frontend. It is responsive, so you can try it on your mobile.",
+        highlights: ["without any external library", "Frontend", "responsive"],
         repository: "https://github.com/nravesz/Portfolio",
         hasDemo: true,
         demo: "https://portfolio-nravesz.vercel.app/"
