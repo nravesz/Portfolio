@@ -14,13 +14,15 @@ type props = {
 const ProjectCard = ({ project }: props) => {
     return (
         <div className="project-card-div">
-            <div className="project-card-name"> {project.name} </div>
-            <div className="project-card-stack-div">
-                <div className="project-card-stack-title"> Stack </div>
-                <div className="project-card-stack"> {project.stack.join(" | ")} </div>
-            </div>
-            <div className="project-card-description">
-                {highlightText(project.description, project.highlights)}
+            <div className="info-div">
+                <div className="project-card-name"> {project.name} </div>
+                <div className="project-card-stack-div">
+                    <div className="project-card-stack-title"> Stack </div>
+                    <p className="project-card-stack">{project.stack.join(" | ")}</p>
+                </div>
+                <div className="project-card-description">
+                    {highlightText(project.description, project.highlights)}
+                </div>
             </div>
             <div className="project-card-links">
                 <ProjectCardButton

@@ -2,16 +2,16 @@
 @import "../../../styles/fonts.scss";
 @import "../../../styles/variables.scss";
 
-p {
-    font-size: $text-size;
-    white-space: pre-wrap;
-    text-align: justify;
-    text-justify: inter-word;
+// p {
+//     font-size: $text-size;
+//     white-space: pre-wrap;
+//     text-align: justify;
+//     text-justify: inter-word;
 
-    @media screen and (max-width: $max-width) {
-        font-size: 10px;
-    };
-};
+//     @media screen and (max-width: $max-width) {
+//         font-size: 10px;
+//     };
+// };
 
 .span {
     color: $primary-color;
@@ -38,9 +38,27 @@ $padding: 15px;
     };
 };
 
-.project-card-div-inactive {
-    
-}
+.info-div {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin: 0; /* Remove margin */
+    @media screen and (max-width: $max-width) {
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        };
+        
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        };
+        
+        &::-webkit-scrollbar-thumb {
+            background: $primary-color;
+            border-radius: 10px;
+        };
+    };
+};
 
 .project-card-name {
     padding: 5px;
@@ -67,9 +85,8 @@ $padding: 15px;
     display: flex;
     justify-content: center;
     font-weight: bold;
-    font-family: $title-family;
     color: $primary-color;
-    font-size: 15px;
+    font-size: $text-size;
     padding-inline: $padding;
 
     @media screen and (max-width: $max-width) {
@@ -79,20 +96,23 @@ $padding: 15px;
 
 .project-card-stack {
     color: white;
-    font-size: 15px;
-    padding-inline: $padding;
-    @media screen and (max-width: $max-width) {
-        font-size: 15px;
-    };
 };
 
-.project-card-description {
-    //flex: 3;
+.project-card-stack, .project-card-description {
     font-size: $text-size;
-    color: white;
-    overflow-y: auto;
+    padding-inline: $padding;
     white-space: pre-wrap;
-    padding: $padding;
+
+    @media screen and (max-width: $max-width) {
+        font-size: 10px;
+        text-align: justify;
+        text-justify: inter-word;
+    };
+}
+
+.project-card-description {
+    color: lightgray;
+    overflow-y: auto;
 
     &::-webkit-scrollbar {
         width: 10px;
@@ -105,13 +125,13 @@ $padding: 15px;
     &::-webkit-scrollbar-thumb {
         background: $primary-color;
     };
+
     @media screen and (max-width: $max-width) {
-        font-size: 10px;
-        text-align: justify;
-        text-justify: inter-word;
+        overflow-y: visible;
 
         &::-webkit-scrollbar {
             width: 5px;
+            overflow-y: visible;
         };
     };
 };
