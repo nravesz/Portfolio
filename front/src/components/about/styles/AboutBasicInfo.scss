@@ -17,9 +17,7 @@
     border: 1px solid $primary-color;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease-in-out;
-    //filter: grayscale(100%);
-    filter: hue-rotate(50deg);
-    cursor: pointer;
+    filter: hue-rotate(0deg);
     margin-bottom: 7px;
     
     &:hover {

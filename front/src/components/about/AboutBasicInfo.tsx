@@ -1,7 +1,7 @@
 import { CVButton } from ".";
 import { ProjectCardButton } from "../projects";
 import "./styles/AboutBasicInfo.scss";
-import potrait from "../../assets/me.jpg";
+import potrait from "../../assets/me.png";
 
 const AboutBasicInfo = () => {
     return (
