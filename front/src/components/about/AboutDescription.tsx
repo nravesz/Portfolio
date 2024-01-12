@@ -11,11 +11,11 @@ const AboutDescription = () => {
             </p>
 
             <p className="about-description-text">
-                In college I have learned to design and implement solutions to 
-                technological problems. I have acquired the ability to learn 
-                continuously and autonomously. Also to work in a team, to 
-                organize myself with different people, to plan a project together 
-                to be delivered on a certain date under certain quality requirements.
+            While in college, I gained experience in designing and implementing solutions to 
+            technological problems, and I have developed the ability to learn continuously 
+            and autonomously. Additionally, I have refined my teamwork skills throughsuccessful 
+            collaboration with diverse individuals, effectively organizing and planning 
+            projects collaboratively to meet specified deadlines and quality requirements.
             </p>
 
             <p className="about-description-text">
